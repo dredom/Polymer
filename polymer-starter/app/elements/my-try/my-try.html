@@ -11,48 +11,37 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../bower_components/paper-styles/typography.html">
 
-<dom-module id="my-list">
+<dom-module id="my-try">
   <template>
-    <style>
+    <style include="shared-styles">
       :host {
         display: block;
       }
 
-      span {
-        @apply(--paper-font-body1);
+      span,
+      input {
+        @apply(--paper-font-body2);
       }
     </style>
 
-    <ul>
-      <template is="dom-repeat" items="{{items}}">
-        <li><span>{{item}}</span></li>
-      </template>
-    </ul>
+    <h1 class="page-title" tabindex="-1">My Try</h1>
+    <p>{{myName}}
   </template>
 
   <script>
+    var xyz = myName;
     (function() {
       'use strict';
 
       Polymer({
-        is: 'my-list',
+        is: 'my-try',
 
         properties: {
-          items: {
-            type: Array,
+          myName: {
+            type: String,
+            value: 'Geronimo!',
             notify: true
           }
-        },
-
-        ready: function() {
-          this.items = [
-            'Responsive Web App boilerplate',
-            'Iron Elements and Paper Elements',
-            'End-to-end Build Tooling (including Vulcanize)',
-            'Unit testing with Web Component Tester - Dude!',
-            'Routing with Page.js',
-            'Offline support with the Platinum Service Worker Elements'
-          ];
         }
       });
     })();

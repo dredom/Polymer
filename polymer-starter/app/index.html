@@ -13,7 +13,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="">
+  <meta name="description" content="Baby steps">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="Polymer Starter Kit">
   <title>Polymer Starter Kit</title>
@@ -87,6 +87,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <span>Users</span>
           </a>
 
+          <a data-route="try" href="{{baseUrl}}try">
+            <iron-icon icon="info"></iron-icon>
+            <span>Try Me</span>
+          </a>
+
           <a data-route="contact" href="{{baseUrl}}contact">
             <iron-icon icon="mail"></iron-icon>
             <span>Contact</span>
@@ -113,7 +118,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
           <!-- Application sub title -->
           <div class="bottom bottom-container">
-            <div class="bottom-title">The future of the web today</div>
+            <div class="bottom-title">The future of the web tomorrow</div>
           </div>
         </paper-toolbar>
 
@@ -169,6 +174,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <paper-material elevation="-1">
                 <h1 class="page-title" tabindex="-1">User: {{params.name}}</h1>
                 <div>This is {{params.name}}'s section</div>
+              </paper-material>
+            </section>
+
+            <!-- Andre's first try. Yay! -->
+            <section data-route="try" tabindex="-1">
+              <paper-material elevation="1">
+                <h1 class="page-title" tabindex="-1">Try Me</h1>
+                <p>This is the my-try section</p>
               </paper-material>
             </section>
 
