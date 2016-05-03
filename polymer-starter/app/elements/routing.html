@@ -33,7 +33,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
 
     function setFocus(selected){
-      document.querySelector('section[data-route="' + selected + '"] .page-title').focus();
+//      document.querySelector('section[data-route="' + selected + '"].page-title').focus();
+      let qs1 = document.querySelector('section[data-route="' + selected + '"]');
+      //let qs2 = qs1.page-title;
+      qs1.focus();
+
     }
 
     // Routes
@@ -81,7 +85,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     // add #! before urls
     page({
-      hashbang: true
+      hashbang: false
     });
 
   });

@@ -11,25 +11,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../bower_components/paper-styles/typography.html">
 
-<dom-module id="my-try">
+<dom-module id="my-try" attributes="name">
   <template>
     <style include="shared-styles">
       :host {
         display: block;
       }
-
-      span,
-      input {
-        @apply(--paper-font-body2);
-      }
     </style>
 
     <h1 class="page-title" tabindex="-1">My Try</h1>
-    <p>{{myName}}
+    <p>Go {{name}}</p>
   </template>
 
   <script>
-    var xyz = myName;
     (function() {
       'use strict';
 
@@ -37,10 +31,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         is: 'my-try',
 
         properties: {
-          myName: {
+          name: {
             type: String,
-            value: 'Geronimo!',
-            notify: true
+            value: 'Joe'
           }
         }
       });
